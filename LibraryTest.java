@@ -4,12 +4,12 @@ import org.junit.*;
 public class LibraryTest {
 
   Library library;
-  // Book book;
+  Book book;
   
   @Before
   public void before() {
     library = new Library("Alford");
-    // book = new Book("Java for Dummies");
+    book = new Book("Java for Dummies");
   } 
 
 
@@ -18,7 +18,10 @@ public class LibraryTest {
     assertEquals( "Alford", library.getName() );
   }
 
-
+  @Test
+  public void hasEmptyStockAtStart() {
+    assertEquals( 0 , library.stockCount() );
+  }
 
 
 

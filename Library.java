@@ -9,4 +9,8 @@ public class Library {
     return this.name ;
   }
 
+  public int stockCount() {
+    return 0;
+  }
+
 }
