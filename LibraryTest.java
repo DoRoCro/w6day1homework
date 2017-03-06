@@ -5,11 +5,13 @@ public class LibraryTest {
 
   Library library;
   Book book;
+  Borrower borrower;
   
   @Before
   public void before() {
     library = new Library("Alford", 1);
     book = new Book("Java for Dummies");
+    borrower = new Borrower("Fox");
   } 
 
 
@@ -33,5 +35,12 @@ public class LibraryTest {
   public void libraryIsFull() {
     library.addBook(book);
     assertEquals(true, library.isFull() );
+  }
+
+  @Test
+  public void canLoanLastBook() {
+    library.addBook(book);
+    borrower.borrowBook( library.loanLastBook() );
+    assertEquals("Java for Dummies", borrower.getBookByIndex(0).getName() ) ;
   }
 }
