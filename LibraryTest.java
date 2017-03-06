@@ -8,7 +8,7 @@ public class LibraryTest {
   
   @Before
   public void before() {
-    library = new Library("Alford", 100);
+    library = new Library("Alford", 1);
     book = new Book("Java for Dummies");
   } 
 
