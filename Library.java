@@ -25,4 +25,8 @@ public class Library {
     int index = stockCount();
     stock[index] = book;
   }
+
+  public boolean isFull() {
+    return stockCount() >= stock.length ;
+  }
 }

@@ -29,4 +29,9 @@ public class LibraryTest {
     assertEquals(1, library.stockCount() );
   }
 
+  @Test
+  public void libraryIsFull() {
+    library.addBook(book);
+    assertEquals(true, library.isFull() );
+  }
 }
