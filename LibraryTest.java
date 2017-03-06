@@ -8,7 +8,7 @@ public class LibraryTest {
   
   @Before
   public void before() {
-    library = new Library("Alford");
+    library = new Library("Alford", 100);
     book = new Book("Java for Dummies");
   } 
 
@@ -23,6 +23,10 @@ public class LibraryTest {
     assertEquals( 0 , library.stockCount() );
   }
 
-
+  @Test
+  public void hasStockAfterAdd() {
+    library.addBook(book);
+    assertEquals(1, library.stockCount() );
+  }
 
 }

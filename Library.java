@@ -1,8 +1,10 @@
 public class Library {
   private String name; 
+  private Book[] stock;
 
-  public Library(String name) {
+  public Library(String name, int bookCapacity) {
      this.name = name;
+     this.stock = new Book[bookCapacity];
   }
 
   public String getName() {
@@ -10,7 +12,17 @@ public class Library {
   }
 
   public int stockCount() {
-    return 0;
+    int count = 0;
+    for ( Book book : stock) {
+      if ( stock[count] != null ) {
+        count++;
+      }
+    }
+    return count;
   }
 
+  public void addBook(Book book) {
+    int index = stockCount();
+    stock[index] = book;
+  }
 }
