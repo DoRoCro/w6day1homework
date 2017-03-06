@@ -3,7 +3,6 @@ import org.junit.*;
 
 public class BookTest {
 
-  Library library;
   Book book;
   
   @Before
